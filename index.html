@@ -4,28 +4,44 @@
     
 </head>
 <body>
-
+    <style>
+        #search-txt{
+        font-size: 30px;        
+            }
+        #id1{
+        font-size: 30px;     
+            color: green;
+            box-shadow: 5px 10px 5px;
+            background-color: azure;
+            
+            }
+        body{
+            background-color: azure;
+        }
+        
+    </style>
+<center>
+    <br>
+    <br>
+    
       <input type="text" placeholder="Enter City Name" id="search-txt">
-      <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
-<br>
+    <button onclick="myfunction()" id="id1">search</button> 
+<!--    <a id="search-btn" href="#"><i class="fas fa-search"></i></a>-->
+</center>
+    <br>
 <br>
 
-  <main id="main">
-   
-      <div id="city-name"></div>
-      <img src="" alt="" id="icon">
+  
     
-      <div id="temp"></div>
+  <script >
+    function myfunction(){
+        var l=document.getElementById("search-txt").value;
+        window.location="http://api.openweathermap.org/data/2.5/weather?q="+l+"&appid=f24f40b1c24505685fce3b8acd0fcffc&mode=html";
+    }
     
-      <div id="humidity-div"></div>
     
-      <div id="pressure-div"></div>
-    
-  </main>
-    
-  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+    </script>
 
-    <script  src="js/index.js"></script>
 
 </body>
 
